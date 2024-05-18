@@ -1,6 +1,6 @@
 {
-  "package": "org.duckdns.sung-a.t-otp",
-  "name": "t-otp",
+  "package": "org.duckdns.sung-a.totp",
+  "name": "TOTP",
   "versionName": "1.0.0",
   "versionCode": 1,
   "minPlatformVersion": 1000,
