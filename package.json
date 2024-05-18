@@ -1,0 +1,27 @@
+{
+  "name": "t-otp",
+  "version": "1.0.0",
+  "description": "",
+  "engines": {
+    "node": ">=8.10"
+  },
+  "scripts": {
+    "start": "aiot server --watch --open-nuttx",
+    "build": "aiot build",
+    "release": "aiot release",
+    "watch": "aiot watch --open-nuttx",
+    "lint": "eslint --format codeframe --fix --ext .ux,.js src/",
+    "send": "yarn build && adb push ./dist/com.example.BandTotp.debug.1.0.0.rpk /sdcard/project"
+  },
+  "dependencies": {
+    "buffer": "^6.0.3",
+    "totp": "git+https://github.com/wuyanxin/totp.js"
+  },
+  "devDependencies": {
+    "@aiot-toolkit/velasim": "^0.1.23",
+    "aiot-toolkit": "^1.1.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^6.8.0",
+    "eslint-plugin-ux": "^0.0.4"
+  }
+}

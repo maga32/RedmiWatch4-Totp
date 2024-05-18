@@ -1,0 +1,80 @@
+<template>
+  <div class="main">
+    <div style="width: 100%;margin-bottom: 20px;margin-top: 0px">
+      <text style="flex: 1;text-align: center">TOTP</text>
+    </div>
+    <scroll style="flex-direction: column;width: 100%;flex: 1" scroll-y="{{true}}">
+      <div class="item" for="k in list" @click="routeDetail(k)">
+        <text>{{k.name}}</text>
+      </div>
+    </scroll>
+    <div if="{{list.length===0}}">
+      <text style="width: 100%;margin-top: 100px;text-align: center">목록없음</text>
+    </div>
+  </div>
+</template>
+
+<script>
+  import router from '@system.router'
+  import prompt from '@system.prompt'
+  import keys from '../../common/keys.json'
+
+  export default {
+    private: {
+      log: "log",
+      list: keys
+    },
+
+    routeDetail(k) {
+      function isBlank(str) {
+        return str !== null && str !== undefined && (!str || /^\s*$/.test(str));
+      }
+      try {
+        if (isBlank(k.name) || isBlank(k.secret) || isBlank(String(k.timeout))) {
+          prompt.showToast({
+            message: '이름 및 key는 비워둘 수 없습니다.',
+            duration: 3000
+          })
+          return
+        }
+        router.push({
+          uri: '/pages/detail',
+          params: {
+            name: this.title,
+            info: JSON.stringify(k)
+          }
+        })
+      }catch (e) {
+        prompt.showToast({
+          message: 'err ' + e,
+          duration: 3000
+        })
+      }
+    }
+  }
+</script>
+
+<style>
+  .main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding:20px 30px 40px ;
+    background-color: black;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(51, 45, 45, 0.9);
+    border-radius: 40px;
+    margin-bottom: 20px;
+    padding: 16px 24px;
+  }
+
+  text {
+    color: white;
+  }
+</style>

@@ -1,0 +1,12 @@
+[
+  {
+    "name": "github",
+    "secret": "ZVRTGK4IO6PVUVR6",
+    "timeout": "30"
+  },
+  {
+    "name": "github2",
+    "secret": "ZVRTGK4IO6PVUVR6",
+    "timeout": "30"
+  }
+]
