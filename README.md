@@ -36,7 +36,7 @@
 ### 2.4. Third App Support가 뜨면 아래와 같이 설치해주세요.
 > - click to input package name : org.duckdns.sung-a.totp
 > - install third app : 다운로드한 rpk파일 선택
-- 만약 설치가 안됐다면 시계를 재부팅 해주시거나 settings - layout 을 변경하시면 계산기 아이콘이 보일겁니다.
+- 만약 설치가 안됐다면 시계를 재부팅 해주시거나 settings - layout 을 변경하시면 TOTP 아이콘이 보일겁니다.
 - 그래도 설치가 안된다면 앱과 통신이 불안정한 상태이니 다시한번 설치 후 시계를 재부팅 해보시기 바랍니다.
 
 ###
@@ -45,7 +45,7 @@
 ### 2.2, 2.3을 진행 후 아래와 같이 삭제해주세요.
 > - click to input package name : org.duckdns.sung-a.totp
 > - uninstall third app  클릭
-- 만약 삭제가 안됐다면 시계를 재부팅 해주시거나 settings - layout 을 변경하시면 계산기 아이콘이 사라질겁니다.
+- 만약 삭제가 안됐다면 시계를 재부팅 해주시거나 settings - layout 을 변경하시면 TOTP 아이콘이 사라질겁니다.
 - 그래도 삭제가 안된다면 앱과 통신이 불안정한 상태이니 다시한번 재설치 후 삭제 해보시기 바랍니다.
 
 ###
